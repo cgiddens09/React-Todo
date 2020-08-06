@@ -59,11 +59,12 @@ class App extends React.Component {
 
   clearList = e => {
     e.preventDefault();
+    
     this.setState({
-      data: this.state.data.filter(item => !item.completed)
+      data:[]
     });
   };
-
+  // this.state.data.filter(item => !item.completed)
   render() {
     return (
       <div>
