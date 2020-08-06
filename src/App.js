@@ -6,17 +6,17 @@ import TodoForm from './components/TodoForm';
 const data = [
   {
       name: 'Walk Dog',
-      id: Date.now(),
+      id: 1,
       completed: false
   },
   {
       name: 'Take Out Trash',
-      id: Date.now(),
+      id: 2,
       completed: false
   },
   {
       name: 'Mow Yard',
-      id: Date.now(),
+      id: 3,
       completed: false
   }
 
@@ -34,7 +34,7 @@ class App extends React.Component {
     console.log(itemId);
     this.setState({
       data: this.state.data.map(item => {
-        if (itemId === item.id) {
+        if (itemId == item.id) {
           return {
             ...item,
             completed: !item.completed
@@ -47,7 +47,7 @@ class App extends React.Component {
 
   addItem = item => {
     const newItem = {
-      task: item,
+      name: item,
       id: Date.now(),
       completed: false
     };
