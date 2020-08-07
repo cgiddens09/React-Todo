@@ -61,10 +61,10 @@ class App extends React.Component {
     e.preventDefault();
     
     this.setState({
-      data:[]
+      data: this.state.data.filter(item => !item.completed)
     });
   };
-  // this.state.data.filter(item => !item.completed)
+  
   render() {
     return (
       <div>
